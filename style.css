@@ -44,6 +44,11 @@ body {
   background-color: #132549;
 }
 
+.icon {
+  display: none;
+  color: white;
+}
+
 .nav h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -88,8 +93,6 @@ body {
   background: linear-gradient(300deg, #E7E7E7 50%, transparent 50%);
   z-index: -1;
 }
-
-
 
 
 .left,
@@ -796,6 +799,53 @@ textarea.input {
 @media (max-width: 768px) {
 
   /* Navbar */
+  /* icon */
+  .icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .icon i {
+    font-size: 4vw;
+  }
+
+  .ankers {
+    display: none;
+    flex-direction: column;
+    background-color: #132549;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+
+  .ankers.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .ankers a {
+    padding: 15px;
+  }
+
+  .nav {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+  }
+
+  .nav h1 {
+    margin: 0;
+  }
+
   .ankers {
     display: none;
   }
@@ -816,16 +866,16 @@ textarea.input {
     width: 50vw;
   }
 
-  .productRight h2{
+  .productRight h2 {
     font-size: 4vw;
   }
 
   /* Our Products  */
-  .secondPage h1{
+  .secondPage h1 {
     font-size: 5vw;
   }
 
-  .secondPage p{
+  .secondPage p {
     font-size: 3vw;
   }
 
@@ -833,7 +883,7 @@ textarea.input {
     width: auto;
   }
 
-  .wrapper{
+  .wrapper {
     padding: 0vw 2vw;
   }
 
@@ -849,7 +899,7 @@ textarea.input {
   }
 
   /* Dealers */
-  .dealers{
+  .dealers {
     padding: 0;
   }
 
@@ -861,7 +911,7 @@ textarea.input {
     width: 26vw;
   }
 
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     display: none;
   }
 }
