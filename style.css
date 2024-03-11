@@ -711,17 +711,19 @@ textarea.input {
   position: relative;
   width: 100%;
   min-height: 60px;
-  padding: 20px 50px;
+  padding: 5px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #132549;
 }
 
 .footer p {
   margin: 15px 0 10px 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
+  color: white;
 }
 
 /*! Media Queries  */
@@ -911,6 +913,7 @@ textarea.input {
     font-size: 4vw;
   }
 
+  /*? Second Page  */
   /* Our Products  */
   .secondPage h1 {
     font-size: 5vw;
@@ -921,7 +924,7 @@ textarea.input {
   }
 
   .item {
-    width: auto;
+    min-width: 50vw;
   }
 
   .wrapper {
@@ -954,5 +957,10 @@ textarea.input {
 
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Footer Mobile */
+  .footer p{
+    font-size: 0.6rem;
   }
 }
