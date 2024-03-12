@@ -818,6 +818,12 @@ textarea.input {
 @media (max-width: 768px) {
 
   /* Navbar */
+  .nav {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+
   /* icon */
   .icon {
     display: block;
@@ -960,7 +966,7 @@ textarea.input {
   }
 
   /* Footer Mobile */
-  .footer p{
+  .footer p {
     font-size: 0.6rem;
   }
 }
