@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --borderRadius: 5px;
 }
 
 html,
@@ -129,6 +137,7 @@ body {
   font-weight: 600;
   background-color: #0E182E;
   margin: 1vw 0;
+  border-radius: var(--borderRadius);
 }
 
 .right {
@@ -295,7 +304,7 @@ body {
   align-items: center;
   background-color: #E7E7E7;
   padding: 1vw 0;
-  border-radius: 1vw;
+  border-radius: var(--borderRadius);
 }
 
 .item-wrapper a {
@@ -388,7 +397,7 @@ body {
   width: 20vw;
   background-color: #E7E7E7;
   padding: 1.5vw 0;
-  border-radius: 0.5vw
+  border-radius: var(--borderRadius);
 }
 
 
@@ -840,9 +849,10 @@ textarea.input {
     background-color: #132549;
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
+    right: 5px;
+    width: 40%;
     z-index: 99;
+    border-radius: var(--borderRadius);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -857,6 +867,7 @@ textarea.input {
 
   .ankers a {
     padding: 15px;
+
   }
 
   .nav {
@@ -864,20 +875,25 @@ textarea.input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 3vw;
+    padding: 4vw;
+    border-bottom: none;
   }
 
   .nav h1 {
     margin: 0;
-  }
-
-  .ankers {
-    display: none;
+    font-size: 4vw;
   }
 
   /*? First page - Landing */
+  .landingPage::before{
+    background: none;
+  }
+
   .landingPage {
-    padding: 25% 0;
+    padding: 15% 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .right {
@@ -886,17 +902,28 @@ textarea.input {
   }
 
   .right img {
-    width: 40vw;
+    width: 55vw;
+  }
+
+  .left{
+    padding: 5% 10%;
+    width: auto;
   }
 
   .left h1 {
-    font-size: 8vw;
+    font-size: 12vw;
     line-height: 1;
     /* text-transform: uppercase; */
   }
 
   .left p {
-    font-size: 3vw;
+    font-size: 5vw;
+  }
+
+  .left a {
+    padding: 3vw 2.5vw;
+    margin: 3vw 0;
+    font-size: 0.8rem;
   }
 
   /* Products */
@@ -966,10 +993,6 @@ textarea.input {
 
   .dealerLogos img {
     width: 26vw;
-  }
-
-  ::-webkit-scrollbar {
-    display: none;
   }
 
   /* Footer Mobile */
