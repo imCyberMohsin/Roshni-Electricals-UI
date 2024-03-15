@@ -282,7 +282,7 @@ body {
 
 .item {
   width: 19vw;
-  height: 40vh;
+  height: auto;
   /* height: auto; */
   /* height has to be auto once the images are recieved */
   background-color: #E7E7E7;
@@ -921,8 +921,13 @@ textarea.input {
 
   /*? Second Page  */
   /* Our Products  */
+  .secondPage{
+    padding: 4% 0;
+  }
+
   .secondPage h1 {
     font-size: 5vw;
+    margin-bottom: 3%;
   }
 
   .secondPage p {
@@ -931,6 +936,7 @@ textarea.input {
 
   .item {
     min-width: 50vw;
+    /* height: auto; */
   }
 
   .wrapper {
@@ -950,11 +956,12 @@ textarea.input {
 
   /* Dealers */
   .dealers {
-    padding: 0;
+    padding: 5% 0;
   }
 
   .dealers h1 {
     font-size: 5vw;
+    padding: 1% 0;
   }
 
   .dealerLogos img {
