@@ -50,7 +50,23 @@ body {
   background-color: #F5F5F5;
   border-bottom: 1px solid #c4c1c1;
   background-color: #132549;
+  position: relative;
+  z-index: 1;
 }
+
+.nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  left: -30%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #0E182E 50%, transparent 50%);
+  z-index: -1;
+}
+
+
 
 .icon {
   display: none;
@@ -291,7 +307,8 @@ body {
 
 .item {
   width: 19vw;
-  height: auto;
+  /* added fixed height for now but will be auto */
+  height: 40vh;
   /* height: auto; */
   /* height has to be auto once the images are recieved */
   background-color: #E7E7E7;
@@ -840,7 +857,7 @@ textarea.input {
   }
 
   .icon i {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .ankers {
@@ -848,7 +865,7 @@ textarea.input {
     flex-direction: column;
     background-color: #132549;
     position: absolute;
-    top: 60px;
+    top: 20vw;
     right: 5px;
     width: 40%;
     z-index: 99;
@@ -875,25 +892,42 @@ textarea.input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 4vw;
+    padding: 6vw;
     border-bottom: none;
+  
   }
 
   .nav h1 {
     margin: 0;
-    font-size: 4vw;
+    font-size: 5vw;
+    padding-left: 23vw;
   }
 
   /*? First page - Landing */
-  .landingPage::before{
+  /* .landingPage::before{
     background: none;
+  } */
+
+  .landingPage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #E7E7E7 49%, transparent 50%);
+    z-index: -1;
   }
 
   .landingPage {
-    padding: 15% 0;
+    /* padding: 15% 0; */
+    padding-top: 25%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* added */
+    height: auto; 
+
   }
 
   .right {
@@ -906,7 +940,7 @@ textarea.input {
   }
 
   .left{
-    padding: 5% 10%;
+    padding: 5% 6%;
     width: auto;
   }
 
@@ -962,8 +996,16 @@ textarea.input {
   }
 
   .item {
-    min-width: 50vw;
-    /* height: auto; */
+    min-width: 45vw;
+    /* added height in mobile view */
+    height: auto; 
+  }
+
+  .content{
+    gap:15px;
+    padding-left: 4px;
+    padding-right: 6px;
+    margin-bottom: 0.5vw;
   }
 
   .wrapper {
